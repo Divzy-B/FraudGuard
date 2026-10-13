@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -97,7 +97,7 @@ def train_model(data: pd.DataFrame, config: TrainingConfig | None = None) -> tup
         "threshold": threshold,
         "config": asdict(config),
         "metrics": metrics,
-        "trained_at": datetime.now(UTC).isoformat(),
+        "trained_at": datetime.now(timezone.utc).isoformat(),
         "model_version": "fraudguard-xgb-v1",
     }
     return artifact, metrics
