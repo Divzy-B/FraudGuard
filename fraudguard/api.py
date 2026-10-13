@@ -11,7 +11,13 @@ from fastapi import FastAPI
 from pydantic import BaseModel, ConfigDict, Field
 
 from fraudguard.data import make_synthetic_transactions
-from fraudguard.model import load_artifact, save_artifact, score_record, shap_explanation, train_model
+from fraudguard.model import (
+    load_artifact,
+    save_artifact,
+    score_record,
+    shap_explanation,
+    train_model,
+)
 
 
 class Transaction(BaseModel):
