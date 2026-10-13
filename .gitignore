@@ -1,0 +1,15 @@
+.venv/
+.test_deps/
+testenv/
+testenv2/
+.pytest-tmp*/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+artifacts/
+reports/
+.env
+*.egg-info/
+dist/
+build/

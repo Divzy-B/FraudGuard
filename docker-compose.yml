@@ -1,0 +1,12 @@
+services:
+  fraudguard:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      FRAUDGUARD_MODEL_PATH: artifacts/fraudguard.joblib
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
